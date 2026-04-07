@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> This integration is archived now that Home Assistant has an [official OpenRGB integration](https://www.home-assistant.io/integrations/openrgb/).
+
 # OpenRGB integration for Home Assistant
 
 ## Pre-requisites
