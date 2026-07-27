@@ -6,6 +6,6 @@
   "documentation": "https://github.com/openrgb-ha/openrgb-ha",
   "iot_class": "local_polling",
   "issue_tracker": "https://github.com/openrgb-ha/openrgb-ha/issues",
-  "requirements": ["openrgb-python==0.4.0"],
+  "requirements": ["openrgb-python @ https://github.com/bazuzzu/openrgb-python/archive/v0.4.0.tar.gz"],
   "version": "2.8.0"
 }
