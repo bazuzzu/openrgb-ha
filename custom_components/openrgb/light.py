@@ -360,6 +360,8 @@ class OpenRGBDevice(OpenRGBLight):
         return f"{self._light.name} {self._light.device_id}"
 
     def _retrieve_current_hsv_color(self) -> tuple[float, float, float]:
+        if not self._light.colors:
+            return (0.0, 0.0, 0.0)
         return color_util.color_RGB_to_hsv(*orgb_tuple(self._light.colors[0]))
 
     def update(self):
@@ -447,6 +449,8 @@ class OpenRGBLed(OpenRGBLight):
         return f"{self._light.name} {self._light.device_id} LED {self._led_id}"
 
     def _retrieve_current_hsv_color(self) -> tuple[float, float, float]:
+        if not self._light.colors or self._led_id >= len(self._light.colors):
+            return (0.0, 0.0, 0.0)
         return color_util.color_RGB_to_hsv(
             *orgb_tuple(self._light.colors[self._led_id])
         )
